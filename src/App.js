@@ -4,6 +4,7 @@ import Switch from "./Switch";
 import InputText from "./InputText";
 import ColorSelector from "./ColorSelector";
 import Password from "./Password";
+import TaskManager from "./TaskManager";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <InputText />
       <ColorSelector />
       <Password />
+      <TaskManager />
     </div>
   );
 }
