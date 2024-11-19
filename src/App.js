@@ -5,6 +5,7 @@ import InputText from "./InputText";
 import ColorSelector from "./ColorSelector";
 import Password from "./Password";
 import TaskManager from "./TaskManager";
+import ProductList from "./Products";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <ColorSelector />
       <Password />
       <TaskManager />
+      <ProductList />
     </div>
   );
 }
