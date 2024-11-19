@@ -5,13 +5,15 @@ function ColorSelector() {
   const changecolor = (event) => setcolor(event.target.value);
 
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
-      <h1>Favorite Color Selector</h1>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-blue-100 p-6">
+      <h1 className="text-3xl font-bold text-gray-800 mb-6">
+        Favorite Color Selector
+      </h1>
 
       <select
         value={initial}
         onChange={changecolor}
-        style={{ padding: "10px", fontSize: "16px", marginBottom: "20px" }}
+        className="px-4 py-2 text-lg border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4"
       >
         <option value="" disabled>
           Select your favorite color
@@ -23,7 +25,7 @@ function ColorSelector() {
         <option value="Yellow">Yellow</option>
       </select>
 
-      <p style={{ fontSize: "18px" }}>
+      <p className="text-xl text-gray-700">
         {initial
           ? `Your favorite color is: ${initial}`
           : "Please select a color."}

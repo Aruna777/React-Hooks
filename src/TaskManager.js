@@ -5,7 +5,7 @@ function TaskManager() {
   const [newTask, setNewTask] = useState("");
 
   const addTask = () => {
-    if (newTask.trim !== "") {
+    if (newTask.trim() !== "") {
       settask([...tasks, newTask]);
       setNewTask("");
     }
@@ -16,56 +16,35 @@ function TaskManager() {
   };
 
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
-      <h1>Task List Manager</h1>
-      <input
-        type="text"
-        value={newTask}
-        onChange={(e) => setNewTask(e.target.value)}
-        placeholder="Enter a new task"
-        style={{ padding: "10px", width: "300px", fontSize: "16px" }}
-      />
-      <button
-        onClick={addTask}
-        style={{
-          marginLeft: "10px",
-          padding: "10px 20px",
-          fontSize: "16px",
-        }}
-      >
-        Add Task
-      </button>
-      <ul
-        style={{
-          marginTop: "20px",
-          textAlign: "left",
-          width: "300px",
-          margin: "20px auto",
-        }}
-      >
+    <div className="flex flex-col items-center justify-center min-h-screen bg-blue-100 p-6">
+      <h1 className="text-3xl font-bold text-gray-800 mb-6">
+        Task List Manager
+      </h1>
+      <div className="flex mb-4">
+        <input
+          type="text"
+          value={newTask}
+          onChange={(e) => setNewTask(e.target.value)}
+          placeholder="Enter a new task"
+          className="px-4 py-2 text-lg border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <button
+          onClick={addTask}
+          className="ml-4 px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+          Add Task
+        </button>
+      </div>
+      <ul className="w-full max-w-md mt-6">
         {tasks.map((task, index) => (
           <li
             key={index}
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              padding: "10px",
-              border: "1px solid #ddd",
-              borderRadius: "5px",
-              marginBottom: "10px",
-            }}
+            className="flex justify-between items-center px-4 py-3 border border-gray-300 rounded-md mb-3 bg-white"
           >
+            <span className="text-lg text-gray-700">{task}</span>
             <button
               onClick={() => removeTask(index)}
-              style={{
-                background: "red",
-                color: "white",
-                border: "none",
-                padding: "5px 10px",
-                cursor: "pointer",
-                borderRadius: "5px",
-              }}
+              className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500"
             >
               Remove
             </button>
