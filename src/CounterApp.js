@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function CounterApp() {
   const [initialcount, setcount] = useState(0);
   const increment = () => setcount(initialcount + 1);
   const decrement = () => setcount(initialcount - 1);
+
+  useEffect(() => {
+    console.log(`Counter value: ${initialcount}`);
+  }, [initialcount]);
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-blue-100 mb-6">

@@ -6,6 +6,8 @@ import ColorSelector from "./ColorSelector";
 import Password from "./Password";
 import TaskManager from "./TaskManager";
 import ProductList from "./Products";
+import ConsoleLogger from "./ConsoleLogger";
+import FetchUsers from "./FetchUsers";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <Password />
         <TaskManager />
         <ProductList />
+        <ConsoleLogger />
+        <FetchUsers />
       </div>
     </div>
   );
