@@ -8,6 +8,7 @@ import TaskManager from "./TaskManager";
 import ProductList from "./Products";
 import ConsoleLogger from "./ConsoleLogger";
 import FetchUsers from "./FetchUsers";
+import MouseTracker from "./MouseTracker";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <ProductList />
         <ConsoleLogger />
         <FetchUsers />
+        <MouseTracker />
       </div>
     </div>
   );
