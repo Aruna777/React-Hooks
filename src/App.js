@@ -9,6 +9,7 @@ import ProductList from "./Products";
 import ConsoleLogger from "./ConsoleLogger";
 import FetchUsers from "./FetchUsers";
 import MouseTracker from "./MouseTracker";
+import UserFetcher from "./UserFetch";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <ConsoleLogger />
         <FetchUsers />
         <MouseTracker />
+        <UserFetcher />
       </div>
     </div>
   );
