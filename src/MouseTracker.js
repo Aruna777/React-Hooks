@@ -25,14 +25,24 @@ function MouseTracker() {
   };
 
   return (
-    <div>
-      <h1>Mouse Position:</h1>
-      <p>
-        X: {position.x}, Y: {position.y}
-      </p>
-      <button onClick={toggleTracking}>
-        {isTracking ? "Stop Tracking" : "Start Tracking"}
-      </button>
+    <div className="flex flex-col items-center justify-center  text-gray-800">
+      <div className="bg-white shadow-lg rounded-lg p-6 w-96 text-center">
+        <h1 className="text-2xl font-bold mb-4">Mouse Tracker</h1>
+        <p className="text-lg mb-6">
+          <span className="font-semibold">X:</span> {position.x},{" "}
+          <span className="font-semibold">Y:</span> {position.y}
+        </p>
+        <button
+          onClick={toggleTracking}
+          className={`px-4 py-2 text-white font-semibold rounded-lg transition ${
+            isTracking
+              ? "bg-red-500 hover:bg-red-600"
+              : "bg-blue-500 hover:bg-blue-600"
+          }`}
+        >
+          {isTracking ? "Stop Tracking" : "Start Tracking"}
+        </button>
+      </div>
     </div>
   );
 }
