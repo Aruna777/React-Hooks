@@ -10,6 +10,7 @@ import ConsoleLogger from "./ConsoleLogger";
 import FetchUsers from "./FetchUsers";
 import MouseTracker from "./MouseTracker";
 import UserFetcher from "./UserFetch";
+import CountdownTimer from "./CountdownTimer";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <FetchUsers />
         <MouseTracker />
         <UserFetcher />
+        <CountdownTimer />
       </div>
     </div>
   );
